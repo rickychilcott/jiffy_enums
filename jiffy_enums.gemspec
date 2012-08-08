@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = JiffyEnums::VERSION
   s.authors     = ["Tejas Ravindra Mandke"]
   s.email       = ["tejas@identified.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/Identified/jiffy_enums"
   s.summary     = "Easy way to add enums"
   s.description = "Easy way to add enums"
 
