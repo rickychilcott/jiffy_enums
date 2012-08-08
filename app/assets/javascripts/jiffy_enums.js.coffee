@@ -1,7 +1,7 @@
 #= require jiffy_enum
-#= require self
+#= require_self
 
-class JiffyEnums
+class window.JiffyEnums
   constructor: (@hash) ->
 
   # equavalent to [] in ruby
@@ -15,18 +15,18 @@ class JiffyEnums
     _.values(@hash)
 
   for_value: (value) =>
-    _.each( all(), (enum) ->
-      return enum if value == enum.value
+    _.each( all(), (_enum) ->
+      return _enum if value == _enum.value
     )
 
   for_ordinal: (ordinal) =>
-    _.each( all(), (enum) ->
-      return enum if ordinal == enum.ordinal
+    _.each( all(), (_enum) ->
+      return _enum if ordinal == _enum.ordinal
     )
 
   all_to_hash: () =>
     hash = {}
-    each( (enum, key) ->
-      hash[key] = enum.value
+    each( (_enum, key) ->
+      hash[key] = _enum.value
     )
     hash

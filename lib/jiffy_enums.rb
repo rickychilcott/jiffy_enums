@@ -51,9 +51,9 @@ module JiffyEnums
   end
 
   def to_coffee
-    "#{self.name}:#{
+    "#{self.name.gsub("::", ": ")}:#{
       @hash.map do |key, enum|
-        "#{key}:new JiffyEnum(#{enum.key}, #{enum.value}, #{enum.ordinal})"
+        "#{key}:new JiffyEnum(\"#{enum.key}\", \"#{enum.value}\", #{enum.ordinal})"
       end.join(", ")
     }"
   end
