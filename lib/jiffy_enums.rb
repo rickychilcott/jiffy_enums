@@ -57,10 +57,12 @@ module JiffyEnums
       "#{result}.#{part}"
     end
 
-    final_coffee + "#{final_variable} = new JiffyEnums #{
+    final_coffee = final_coffee + "#{final_variable} = new JiffyEnums #{
       @hash.map do |key, enum|
         "#{key}:new JiffyEnum(\"#{enum.key}\", \"#{enum.value}\", #{enum.ordinal})"
       end.join(", ")
-    }"
+    }\n"
+    puts final_coffee
+    final_coffee
   end
 end
