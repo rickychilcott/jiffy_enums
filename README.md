@@ -24,8 +24,8 @@ MyEnums::ENUM2
 
 ##Coffee Usage
 ```coffeescript
-class Enums
-  <%= MyEnums.to_coffee %>
+Enums = {}
+<%= MyEnums.to_coffee("Enums") %>
 
 Enums.MyEnums.get("ENUM1").key
 => "ENUM1"

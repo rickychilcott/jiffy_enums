@@ -50,8 +50,14 @@ module JiffyEnums
     hash
   end
 
-  def to_coffee
-    "#{self.name.gsub("::", ": ")}:#{
+  def to_coffee(baseHashStr)
+    final_coffee = ""
+    final_variable = self.name.split("::").inject(baseHashStr) do |result,part|
+      final_coffee += "#{result}.#{part} ||= {}\n"
+      "#{result}.#{part}"
+    end
+
+    final_coffee + "#{final_variable} = new JiffyEnums #{
       @hash.map do |key, enum|
         "#{key}:new JiffyEnum(\"#{enum.key}\", \"#{enum.value}\", #{enum.ordinal})"
       end.join(", ")
