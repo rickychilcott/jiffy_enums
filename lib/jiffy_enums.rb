@@ -27,19 +27,15 @@ module JiffyEnums
   end
 
   def for_value (value)
-    all do |enum|
-      if enum.value == value
-        return enum
-      end
-    end
+    all.select do |enum|
+      enum.value == value
+    end.first
   end
 
   def for_ordinal (ordinal)
-    all do |enum|
-      if enum.ordinal == ordinal
-        return enum
-      end
-    end
+    all.select do |enum|
+      enum.ordinal == ordinal
+    end.first
   end
 
   def all_to_hash
