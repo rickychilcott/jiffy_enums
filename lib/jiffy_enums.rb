@@ -58,7 +58,6 @@ module JiffyEnums
         "#{key}:new JiffyEnum(\"#{enum.key}\", \"#{enum.value}\", #{enum.ordinal})"
       end.join(", ")
     }\n"
-    puts final_coffee
     final_coffee
   end
 end
