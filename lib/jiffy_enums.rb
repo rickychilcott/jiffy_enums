@@ -1,20 +1,22 @@
-require "jiffy_enums/engine"
 require "jiffy_enum"
 
 module JiffyEnums
+  include Enumerable
   # ordinals start from index 1 and NOT 0
-  def define(key, value = nil)
+  def define(key, value = nil, &overrides)
     @hash ||= {}
-    @hash[key] = ::JiffyEnum.new(key, value, @hash.keys.length + 1)
+    the_enum = self.new(key, value, @hash.keys.length + 1)
+    @hash[key] = the_enum
+    define_singleton_method(key) do
+      the_enum
+    end
+    the_enum.instance_eval(&overrides) unless overrides.nil?
   end
 
   def [] (key)
     @hash[key]
   end
 
-  def const_missing(key)
-    @hash[key].value
-  end
 
   def each
     @hash.each do |key, value|
