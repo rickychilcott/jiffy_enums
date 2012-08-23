@@ -1,4 +1,5 @@
 require 'jiffy_enums'
+require 'jiffy_enums/engine'
 
 class JiffyEnum
   extend JiffyEnums
