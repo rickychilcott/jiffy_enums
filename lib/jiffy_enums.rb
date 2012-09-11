@@ -4,9 +4,11 @@ module JiffyEnums
   include Enumerable
   # ordinals start from index 1 and NOT 0
   def define(key, value = nil, &overrides)
+    @size = (@size || 0) + 1
     @hash ||= {}
-    the_enum = self.new(key, value, @hash.keys.length + 1)
+    the_enum = self.new(key, value, @size )
     @hash[key] = the_enum
+    @hash[key.to_s] =the_enum
     define_singleton_method(key) do
       the_enum
     end
