@@ -1,6 +1,7 @@
 #JiffyEnums
 
-[![Build Status](https://travis-ci.org/Identified/jiffy_enums].png?branch=master,development)](https://travis-ci.org/Identified/jiffy_enums)
+[![Build Status - master ](https://travis-ci.org/Identified/jiffy_enums.png?branch=master)](https://travis-ci.org/Identified/jiffy_enums)
+[![Build Status - development ](https://travis-ci.org/Identified/jiffy_enums.png?branch=development)](https://travis-ci.org/Identified/jiffy_enums)
 
 This project rocks and uses MIT-LICENSE.
 
