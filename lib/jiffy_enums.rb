@@ -1,7 +1,6 @@
 require "jiffy_enum"
 
 module JiffyEnums
-  include Enumerable
   # ordinals start from index 1 and NOT 0
   def define(key, value = nil, &overrides)
     @hash ||= {}
@@ -16,7 +15,6 @@ module JiffyEnums
   def [] (key)
     @hash[key]
   end
-
 
   def each
     @hash.each do |key, value|
