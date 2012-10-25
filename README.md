@@ -1,5 +1,7 @@
 #JiffyEnums
 
+[![Build Status](https://travis-ci.org/Identified/jiffy_enums].png?branch=master,development)](https://travis-ci.org/Identified/jiffy_enums)
+
 This project rocks and uses MIT-LICENSE.
 
 ##Ruby Usage
