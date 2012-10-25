@@ -70,7 +70,6 @@ describe ExampleEnums do
 
   describe "enumerable methods" do
     it "selects" do
-      debugger
       result = subject.select {|enum| enum.is_cool }
       result.should match_array([ExampleEnums.Yes])
     end

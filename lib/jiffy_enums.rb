@@ -18,7 +18,7 @@ module JiffyEnums
 
   def each
     @hash.each do |key, value|
-      yield key, value
+      yield value
     end
   end
 
