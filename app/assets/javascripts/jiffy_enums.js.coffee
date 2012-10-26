@@ -3,6 +3,10 @@
 
 class window.JiffyEnums
   constructor: (@hash) ->
+    that = this
+    _.each(@hash, (k,v) ->
+      that[v] = k
+    )
 
   # equavalent to [] in ruby
   get: (key) =>
