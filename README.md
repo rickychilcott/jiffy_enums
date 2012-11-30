@@ -2,6 +2,8 @@
 
 This project rocks and uses MIT-LICENSE.
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Identified/jiffy_enums)
+
 * **master:** [![Build Status master](https://travis-ci.org/Identified/jiffy_enums.png?branch=master)](https://travis-ci.org/Identified/jiffy_enums)
 * **development:** [![Build Status development](https://travis-ci.org/Identified/jiffy_enums.png?branch=development)](https://travis-ci.org/Identified/jiffy_enums)
 
