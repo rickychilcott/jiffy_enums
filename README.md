@@ -1,11 +1,9 @@
-#JiffyEnums
+JiffyEnums
+=========
+[![Build Status](https://api.travis-ci.org/Identified/jiffy_enums.png?branch=master)](https://travis-ci.org/Identified/jiffy_enums)
+[![Code Climate](https://codeclimate.com/github/Identified/jiffy_enums.png)](https://codeclimate.com/github/Identified/jiffy_enums)
 
 This project rocks and uses MIT-LICENSE.
-
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Identified/jiffy_enums)
-
-* **master:** [![Build Status master](https://travis-ci.org/Identified/jiffy_enums.png?branch=master)](https://travis-ci.org/Identified/jiffy_enums)
-* **development:** [![Build Status development](https://travis-ci.org/Identified/jiffy_enums.png?branch=development)](https://travis-ci.org/Identified/jiffy_enums)
 
 ##Ruby Usage
 ```ruby
