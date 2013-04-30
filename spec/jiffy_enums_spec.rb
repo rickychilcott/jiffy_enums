@@ -24,8 +24,14 @@ class ExampleEnums < JiffyEnum
       false
     end
   end
-  
+
   define :Maybe do
+    def is_cool
+      nil
+    end
+  end
+
+  define :Woot, 'Woot', 10 do
     def is_cool
       nil
     end
@@ -66,6 +72,12 @@ describe ExampleEnums do
       subject.Yes.we_all_say.should == 'something'
       subject.No.we_all_say.should == 'something'
     end  
+  end
+
+  describe '#for_ordinal(10)' do
+    it 'should find Woot' do
+      subject.for_ordinal(10).value == 'Woot'
+    end
   end
 
   describe "enumerable methods" do

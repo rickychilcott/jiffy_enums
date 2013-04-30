@@ -2,14 +2,14 @@ require "jiffy_enum"
 
 module JiffyEnums
   # ordinals start from index 1 and NOT 0
-  def define(key, value = nil, &overrides)
-    @size = (@size || 0) + 1
+  def define(key, value = nil, ordinal = nil, &overrides)
     @hash ||= {}
     @array ||= []
-    the_enum = self.new(key, value, @size )
+    ordinal ||= @array.size + 1
+    the_enum = self.new(key, value, ordinal )
     @hash[key]      = the_enum
     @hash[key.to_s] = the_enum
-    @array << the_enum
+    @array[ordinal - 1] = the_enum
     define_singleton_method(key) do
       the_enum
     end
@@ -26,8 +26,12 @@ module JiffyEnums
     end
   end
 
+  def select *args, &block
+    all.select *args, &block
+  end
+
   def all
-    @array.map{|x|x}
+    @array.map{|x|x}.compact
   end
 
   def for_value (value)
