@@ -13,6 +13,10 @@ rvm:
 gemfile:
   - Gemfile
 
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+
 notifications:
   email:
     - ci-admins@identified.com
