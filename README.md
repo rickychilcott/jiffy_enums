@@ -1,5 +1,6 @@
 # JiffyEnums
 
+[![Gem Version](https://badge.fury.io/rb/jiffy_enums.png)](http://badge.fury.io/rb/jiffy_enums)
 [![Build Status](https://api.travis-ci.org/Identified/jiffy_enums.png?branch=master)](https://travis-ci.org/Identified/jiffy_enums)
 [![Code Climate](https://codeclimate.com/github/Identified/jiffy_enums.png)](https://codeclimate.com/github/Identified/jiffy_enums)
 
