@@ -1,4 +1,4 @@
-require "jiffy_enum"
+require 'jiffy_enum'
 
 module JiffyEnums
   # ordinals start from index 1 and NOT 0
@@ -53,8 +53,8 @@ module JiffyEnums
   end
 
   def to_coffee(baseHashStr)
-    final_coffee = ""
-    final_variable = self.name.split("::").inject(baseHashStr) do |result,part|
+    final_coffee = ''
+    final_variable = self.name.split('::').inject(baseHashStr) do |result,part|
       final_coffee += "#{result}.#{part} ||= {}\n"
       "#{result}.#{part}"
     end

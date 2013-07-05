@@ -28,13 +28,13 @@ MyEnums::ENUM2
 ##Coffee Usage
 ```coffeescript
 Enums = {}
-<%= MyEnums.to_coffee("Enums") %>
+<%= MyEnums.to_coffee('Enums') %>
 
-Enums.MyEnums.get("ENUM1").key
+Enums.MyEnums.get('ENUM1').key
 => "ENUM1"
-Enums.MyEnums.get("ENUM1").value
+Enums.MyEnums.get('ENUM1').value
 => "enum 1"
-Enums.MyEnums.get("ENUM1").ordinal
+Enums.MyEnums.get('ENUM1').ordinal
 => 1
 =>
 ```

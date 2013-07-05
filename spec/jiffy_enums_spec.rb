@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe JiffyEnums do
-  it {should be_a_kind_of Module}
+  it { should be_a_kind_of Module }
 end
 
 class ExampleEnums < JiffyEnum
@@ -38,7 +38,7 @@ class ExampleEnums < JiffyEnum
   end
 
   def say
-    "no go"
+    'no go'
   end
   
   def we_all_say
@@ -48,42 +48,42 @@ end
 
 describe ExampleEnums do
   subject { ExampleEnums }
-  describe "the enums (accessed as class methods)" do
-    it "has correct ordinal values" do
-      subject.Yes.ordinal.should == 1
-      subject.No.ordinal.should == 2
-      subject.Maybe.ordinal.should == 3
+  describe 'the enums (accessed as class methods)' do
+    it 'has correct ordinal values' do
+      expect(subject.Yes.ordinal).to eq  1
+      expect(subject.No.ordinal).to eq  2
+      expect(subject.Maybe.ordinal).to eq  3
     end
 
-    it "has correct key values" do
-      subject.Yes.key.should == :Yes
-      subject.No.key.should == :No
-      subject.Maybe.key.should == :Maybe
+    it 'has correct key values' do
+      expect(subject.Yes.key).to eq  :Yes
+      expect(subject.No.key).to eq  :No
+      expect(subject.Maybe.key).to eq  :Maybe
     end
 
-    it "allows function calls to defined functions in the enum" do
-      subject.Yes.say.should == 'I say hello'
-      subject.No.say.should == 'you say good bye'
+    it 'allows function calls to defined functions in the enum' do
+      expect(subject.Yes.say).to eq  'I say hello'
+      expect(subject.No.say).to eq  'you say good bye'
     end
 
-    it "has access to globally defined functions" do
-      subject.Maybe.say.should == 'no go'
-      subject.Maybe.we_all_say.should == 'something'
-      subject.Yes.we_all_say.should == 'something'
-      subject.No.we_all_say.should == 'something'
+    it 'has access to globally defined functions' do
+      expect(subject.Maybe.say).to eq 'no go'
+      expect(subject.Maybe.we_all_say).to eq 'something'
+      expect(subject.Yes.we_all_say).to eq 'something'
+      expect(subject.No.we_all_say).to eq 'something'
     end  
   end
 
   describe '#for_ordinal(10)' do
-    it 'should find Woot' do
-      subject.for_ordinal(10).value == 'Woot'
+    it 'finds Woot' do
+      expect(subject.for_ordinal(10).value).to eq 'Woot'
     end
   end
 
-  describe "enumerable methods" do
-    it "selects" do
-      result = subject.select {|enum| enum.is_cool }
-      result.should match_array([ExampleEnums.Yes])
+  describe 'enumerable methods' do
+    it 'selects' do
+      result = subject.select { |enum| enum.is_cool }
+      expect(result).to match_array([ExampleEnums.Yes])
     end
   end
 end
