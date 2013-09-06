@@ -21,7 +21,7 @@ And then execute:
 ### In Ruby
 
 ```ruby
-Class MyEnums < JiffyEnums
+Class MyEnums < JiffyEnum
   define :ENUM1, 'enum 1'
   define :ENUM2, 'enum 2'
   define :ENUM3, 'enum 3'
