@@ -21,17 +21,17 @@ And then execute:
 ### In Ruby
 
 ```ruby
-Class MyEnums < JiffyEnums
-  define :ENUM1, 'enum 1'
-  define :ENUM2, 'enum 2'
-  define :ENUM3, 'enum 3'
+class MyEnums < JiffyEnums
+  define :enum1, 'enum 1'
+  define :enum2, 'enum 2'
+  define :enum3, 'enum 3'
 end
 
-MyEnums[:ENUM1].key
+MyEnums[:enum1].key
 => :ENUM1
-MyEnums[:ENUM1].value
+MyEnums[:enum1].value
 => "enum 1"
-MyEnums[:ENUM1].ordinal
+MyEnums[:enum1].ordinal
 => 1
 
 MyEnums::ENUM2
@@ -44,11 +44,11 @@ MyEnums::ENUM2
 Enums = {}
 <%= MyEnums.to_coffee('Enums') %>
 
-Enums.MyEnums.get('ENUM1').key
+Enums.MyEnums.get('enum1').key
 => "ENUM1"
-Enums.MyEnums.get('ENUM1').value
+Enums.MyEnums.get('enum1').value
 => "enum 1"
-Enums.MyEnums.get('ENUM1').ordinal
+Enums.MyEnums.get('enum1').ordinal
 => 1
 =>
 ```
